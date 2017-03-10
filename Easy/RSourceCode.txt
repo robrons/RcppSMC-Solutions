@@ -1,0 +1,25 @@
+> # Using RcppSMC Package
+> library(RcppSMC)
+> 
+> # Example:'blockpfGaussianOpt' 
+> 
+> #Gaussian Simulation 
+> sim <- simGaussian(len=250)
+> 
+> # Execution of the SMC Example 
+> res <- blockpfGaussianOpt(sim$data,lag=5,plot=TRUE)
+> 
+> # Example: 'pfLineartBS' with pfLineartBSOnlinePlot function that provides a simple default ‘online’ plotting function
+> 
+> res <- pfLineartBS(plot=TRUE)
+> if (interactive()) ## if not running R CMD check etc
++ res <- pfLineartBS(onlinePlot=pfLineartBSOnlinePlot)
+> 
+> # Example: 'pfNonlinBS' (Nonlinear Bootstrap Particle Filter) 
+> 
+> # Non-linear data simulation 
+> sim <- simNonlin(len=50)
+> 
+> # Execution of the SMC Example 
+> res <- pfNonlinBS(sim$data,particles=500,plot=TRUE)
+> 

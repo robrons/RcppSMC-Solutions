@@ -1,2 +1,2 @@
 # RcppSMC-Solutions
-Solutions to Easy, Medium and Hard problems for rstats GSoC 2017 
+Solutions to Easy, Medium and Hard test for RcppSMC project (GSoC 2017)
